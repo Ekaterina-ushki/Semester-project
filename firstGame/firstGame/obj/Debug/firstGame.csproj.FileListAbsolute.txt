@@ -1,0 +1,9 @@
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\bin\Debug\firstGame.exe.config
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\bin\Debug\firstGame.exe
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\bin\Debug\firstGame.pdb
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.csprojAssemblyReference.cache
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.Properties.Resources.resources
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.csproj.GenerateResource.cache
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.csproj.CoreCompileInputs.cache
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.exe
+C:\Users\Мвидео\Desktop\кракен\Ekaterina\firstGame\firstGame\obj\Debug\firstGame.pdb
