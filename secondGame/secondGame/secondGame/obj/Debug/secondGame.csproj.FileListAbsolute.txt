@@ -1,0 +1,17 @@
+C:\Users\Себастиан\Desktop\secondGame\secondGame\bin\Debug\secondGame.exe.config
+C:\Users\Себастиан\Desktop\secondGame\secondGame\bin\Debug\secondGame.exe
+C:\Users\Себастиан\Desktop\secondGame\secondGame\bin\Debug\secondGame.pdb
+C:\Users\Себастиан\Desktop\secondGame\secondGame\obj\Debug\secondGame.csprojResolveAssemblyReference.cache
+C:\Users\Себастиан\Desktop\secondGame\secondGame\obj\Debug\secondGame.Properties.Resources.resources
+C:\Users\Себастиан\Desktop\secondGame\secondGame\obj\Debug\secondGame.csproj.GenerateResource.Cache
+C:\Users\Себастиан\Desktop\secondGame\secondGame\obj\Debug\secondGame.exe
+C:\Users\Себастиан\Desktop\secondGame\secondGame\obj\Debug\secondGame.pdb
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\bin\Debug\secondGame.exe.config
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\bin\Debug\secondGame.exe
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\bin\Debug\secondGame.pdb
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.csprojAssemblyReference.cache
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.Properties.Resources.resources
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.csproj.GenerateResource.cache
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.csproj.CoreCompileInputs.cache
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.exe
+C:\Users\Мвидео\Desktop\secondGame\secondGame\secondGame\obj\Debug\secondGame.pdb
