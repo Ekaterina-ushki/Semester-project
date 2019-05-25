@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Games
@@ -113,12 +107,12 @@ namespace Games
                     else
                     {
                         var rrnd = rnd.Next() % 2;
-                        if (rrnd == 0)  
+                        if (rrnd == 0)
                             firstImage += 1;
                         var image = new PictureBox();
                         if (firstImage < allImage)
                         {
-                            image.ImageLocation = rrnd == 0 ? $"images//p1.png" : $"images//p11.png";
+                            image.ImageLocation = $"images//cat{rrnd}.png";
                             image.SizeMode = PictureBoxSizeMode.StretchImage;
                             image.Dock = DockStyle.Fill;
                             image.Click += MakeMove;
@@ -126,7 +120,7 @@ namespace Games
                         }
                         else
                         {
-                            image.BackColor = Color.Yellow;
+                            image.ImageLocation = "images//cat1.png";
                             image.Dock = DockStyle.Fill;
                             image.Click += MakeMove;
                             table.Controls.Add(image, column, row);
@@ -136,30 +130,30 @@ namespace Games
                     }
                 }
             Controls.Add(table);
-            if (CheckWin())
-                StartGame();
-            else
-                timer.Interval = 1000 - difficult;
+            //if (CheckWin())
+            //    StartGame();
+            //else
+            timer.Interval = 1000 - difficult;
             timer.Start();
         }
 
         bool CheckWin()
         {
-            var color = table.GetControlFromPosition(1, 1).BackgroundImage;
+            var image = ((PictureBox)table.GetControlFromPosition(1, 1)).ImageLocation;
             for (int column = 1; column < width + 1; column++)
                 for (int row = 1; row < height + 1; row++)
                 {
-                    if (table.GetControlFromPosition(column, row).BackgroundImage != color)
-                        return true;
+                    if (((PictureBox)table.GetControlFromPosition(column, row)).ImageLocation != image)
+                        return false;
                 }
-            return false;
+            return true;
         }
 
         void MakeMove(object sender, EventArgs e)
         {
             var position = table.GetCellPosition((Control)sender);
             var im = (PictureBox)sender;
-            im.ImageLocation = im.ImageLocation == $"images//p1.png" ? $"images//p11.png" : $"images//p1.png";
+            im.ImageLocation = im.ImageLocation == $"images//cat1.png" ? $"images//cat0.png" : $"images//cat1.png";
             if (CheckWin())
             {
                 timer.Stop();
