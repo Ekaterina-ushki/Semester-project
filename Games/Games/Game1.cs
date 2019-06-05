@@ -14,6 +14,7 @@ namespace Games
         Timer timer;
         Form parent;
         bool isUsualExit = true;
+
         public Game1(Form parent)
         {
             InitializeComponent();
@@ -51,31 +52,6 @@ namespace Games
             close.Click += CloseForm;
             Controls.Add(close);
             StartGame();
-        }
-
-        void GameOver()
-        {
-            timer.Stop();
-            for (int column = 1; column < width + 1; column++)
-                for (int row = 1; row < height + 1; row++)
-                    table.GetControlFromPosition(column, row).Enabled = false;
-            var result = MessageBox.Show($"Ваш результат: {score}\nХотите начать заново?", "", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                timer.Stop();
-                time = 10;
-                label.Text = "10";
-                timer.Interval = 1000;
-                difficult = 0;
-                score = 0;
-                Controls.Remove(table);
-                StartGame();
-            }
-            else
-            {
-                isUsualExit = false;
-                Close();
-            }
         }
 
         void StartGame()
@@ -137,16 +113,29 @@ namespace Games
             timer.Start();
         }
 
-        bool CheckWin()
+        void GameOver()
         {
-            var image = ((PictureBox)table.GetControlFromPosition(1, 1)).ImageLocation;
+            timer.Stop();
             for (int column = 1; column < width + 1; column++)
                 for (int row = 1; row < height + 1; row++)
-                {
-                    if (((PictureBox)table.GetControlFromPosition(column, row)).ImageLocation != image)
-                        return false;
-                }
-            return true;
+                    table.GetControlFromPosition(column, row).Enabled = false;
+            var result = MessageBox.Show($"Ваш результат: {score}\nХотите начать заново?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                timer.Stop();
+                time = 10;
+                label.Text = "10";
+                timer.Interval = 1000;
+                difficult = 0;
+                score = 0;
+                Controls.Remove(table);
+                StartGame();
+            }
+            else
+            {
+                isUsualExit = false;
+                Close();
+            }
         }
 
         void MakeMove(object sender, EventArgs e)
@@ -166,6 +155,17 @@ namespace Games
             }
         }
 
+        bool CheckWin()
+        {
+            var image = ((PictureBox)table.GetControlFromPosition(1, 1)).ImageLocation;
+            for (int column = 1; column < width + 1; column++)
+                for (int row = 1; row < height + 1; row++)
+                    if (((PictureBox)table.GetControlFromPosition(column, row)).ImageLocation != image)
+                        return false;
+            return true;
+        }
+
+       
         void CloseForm(object sender, EventArgs e)
         {
             Close();

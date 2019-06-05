@@ -14,6 +14,7 @@ namespace Games
         Timer timer;
         Form parent;
         bool isUsualExit = true;
+
         public Game2(Form parent)
         {
             InitializeComponent();
@@ -53,31 +54,6 @@ namespace Games
             StartGame();
         }
 
-        void GameOver()
-        {
-            timer.Stop();
-            for (int column = 1; column < width + 1; column++)
-                for (int row = 1; row < height + 1; row++)
-                    table.GetControlFromPosition(column, row).Enabled = false;
-            var result = MessageBox.Show($"Ваш результат: {score}\nХотите начать заново?", "", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                timer.Stop();
-                time = 10;
-                label.Text = "10";
-                timer.Interval = 1000;
-                difficult = 0;
-                score = 0;
-                Controls.Remove(table);
-                StartGame();
-            }
-            else
-            {
-                isUsualExit = false;
-                Close();
-            }
-        }
-
         void StartGame()
         {
             Random rnd = new Random();
@@ -105,7 +81,7 @@ namespace Games
             sad_image.SizeMode = PictureBoxSizeMode.StretchImage;
             sad_image.Dock = DockStyle.Fill;
             sad_image.Click += RightClick;
-           
+
 
             for (int column = 0; column < width + 2; column++)
                 for (int row = 0; row < height + 2; row++)
@@ -113,7 +89,7 @@ namespace Games
                     if (column == 0 || row == 0 || column == (width + 1) || row == (height + 1))
                         table.Controls.Add(new Panel(), column, row);
                     else if (column == rand_x && row == rand_y)
-                        table.Controls.Add(sad_image, rand_x, rand_y);
+                        table.Controls.Add(sad_image, column, row);
                     else
                     {
                         var rrnd = rnd.Next(1, 4);
@@ -129,6 +105,31 @@ namespace Games
             Controls.Add(table);
             timer.Interval = 1000 - difficult;
             timer.Start();
+        }
+
+        void GameOver()
+        {
+            timer.Stop();
+            for (int column = 1; column < width + 1; column++)
+                for (int row = 1; row < height + 1; row++)
+                    table.GetControlFromPosition(column, row).Enabled = false;
+            var result = MessageBox.Show($"Ваш результат: {score}\nХотите начать заново?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                timer.Stop();
+                time = 10;
+                label.Text = "10";
+                timer.Interval = 1000;
+                difficult = 0;
+                score = 0;
+                Controls.Remove(table);
+                StartGame();
+            }
+            else
+            {
+                isUsualExit = false;
+                Close();
+            }
         }
 
         void RightClick(object sender, EventArgs e)

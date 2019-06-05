@@ -22,3 +22,15 @@ C:\Users\Мвидео\Desktop\кракен\Semester project\Games\Games\obj\Debu
 C:\Users\Мвидео\Desktop\кракен\Semester project\Games\Games\obj\Debug\Games.csproj.CoreCompileInputs.cache
 C:\Users\Мвидео\Desktop\кракен\Semester project\Games\Games\obj\Debug\Games.exe
 C:\Users\Мвидео\Desktop\кракен\Semester project\Games\Games\obj\Debug\Games.pdb
+C:\кракен\Semester project\Games\Games\bin\Debug\Games.exe.config
+C:\кракен\Semester project\Games\Games\bin\Debug\Games.exe
+C:\кракен\Semester project\Games\Games\bin\Debug\Games.pdb
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.csprojAssemblyReference.cache
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.Game1.resources
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.Game2.resources
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.MainMenu.resources
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.Properties.Resources.resources
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.csproj.GenerateResource.cache
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.csproj.CoreCompileInputs.cache
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.exe
+C:\кракен\Semester project\Games\Games\obj\Debug\Games.pdb
